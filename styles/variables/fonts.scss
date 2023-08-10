@@ -1,0 +1,44 @@
+.text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: $color-font-primary;
+
+  /* Styles class */
+  &_bold {
+    font-weight: 600;
+  }
+
+  &_h1 {
+    font-size: 40px;
+    font-weight: 600;
+  }
+
+  &_h2 {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  /* Color class */
+  &_second {
+    color: $color-font-secondary;
+  }
+
+  &_disabled {
+    color: $color-font-disabled;
+  }
+
+  &_placeholder {
+    color: $color-font-placeholder;
+  }
+
+  &_error {
+    color: $color-error;
+  }
+
+  &_search-active {
+    color: color-primary-active;
+  }
+}
