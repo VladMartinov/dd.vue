@@ -1,0 +1,106 @@
+.button {
+  padding: 12px 16px;
+
+  width: fit-content;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 4px;
+
+  /* Button color */
+  &_primary {
+    background-color: $color-primary-default;
+
+    &,
+    & .text {
+      color: $color-font-secondary;
+    }
+
+    &:hover {
+      background-color: $color-primary-hover;
+    }
+    &:active,
+    &.active {
+      background-color: $color-primary-active;
+    }
+    &.disabled {
+      background-color: $color-primary-disabled;
+
+      &,
+      & .text {
+        color: $color-font-disabled;
+      }
+    }
+  }
+  &_secondary {
+    border: 1px solid $color-border-default;
+    background-color: $color-secondary-default;
+
+    & {
+      color: $color-font-primary;
+    }
+
+    &:hover {
+      border-color: $color-border-hover;
+      background-color: $color-secondary-hover;
+    }
+    &:active,
+    &.active {
+      border-color: $color-border-active;
+      background-color: $color-secondary-active;
+    }
+    &.disabled {
+      border-color: $color-border-disabled;
+
+      &,
+      & .text {
+        color: $color-font-disabled;
+      }
+    }
+  }
+
+  &_nav {
+    border: 1px solid $color-secondary-default;
+
+    & .text {
+      color: $color-font-secondary;
+    }
+
+    &:hover {
+      border-color: transparent;
+      background-color: $color-secondary-hover;
+
+      & .text {
+        color: $color-font-primary;
+      }
+    }
+    &:active,
+    &.active {
+      border-color: transparent;
+      background-color: $color-secondary-default;
+
+      & .text {
+        color: $color-font-primary;
+      }
+    }
+  }
+
+  /* Other */
+  &_small {
+    padding: 9px;
+  }
+  &_text-icon {
+    padding: 9px 9px 9px 16px;
+  }
+}
+
+/* Button content */
+.button__text {
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+.button__icon {
+}

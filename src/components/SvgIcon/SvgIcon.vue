@@ -1,6 +1,6 @@
 <template>
   <svg :class="className" :width="size.width || 24" :height="size.height || 24">
-    <use :xlink:href="iconPath"/>
+    <use :xlink:href="'#' + iconPath"/>
   </svg>
 </template>
 
@@ -33,13 +33,13 @@ export default {
         icon = icon.default;
       }
 
-      return icon.url;
+      return icon.id;
     },
 
     className() {
-      let newClassName = 'svg-icon svg-icon--' + this.name;
+      let newClassName = 'svg-icon svg-icon_' + this.name;
 
-      if (this.isFlip) newClassName + ' svg-icon_flipped';
+      if (this.isFlip) newClassName += ' flipped';
 
       return newClassName;
     }
@@ -48,5 +48,5 @@ export default {
 </script>
 
 <style>
-  @import "./index";
+  @import "./index.scss";
 </style>
