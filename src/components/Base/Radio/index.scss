@@ -1,0 +1,54 @@
+.radio {
+  position: relative;
+  display: flex;
+
+  flex-shrink: 0;
+
+  width: 20px;
+  height: 20px;
+
+  border-radius: 50%;
+  border: 2px solid $color-border-default;
+
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: "";
+  
+    border-radius: 50%;
+  
+    height: 10px;
+    width: 10px;
+  
+    top: 50%;
+    left: 50%;
+  
+    transform: translate(-50%, -50%);
+
+    background-color: transparent;
+  }
+
+  &.active {
+    border-color: $color-primary-default;
+
+    &::before {
+      background-color: $color-primary-default;
+    }
+  }
+
+  &.disabled {
+    background-color: $color-border-disabled;
+
+    pointer-events: none;
+    cursor: default;
+
+    &.active {
+      border-color: $color-font-disabled;
+
+      &::before {
+        background-color: $color-font-disabled;
+      }
+    }
+  }
+}
