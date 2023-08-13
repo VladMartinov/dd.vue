@@ -62,7 +62,6 @@ export default {
       return newTextClass;
     }
   },
-  watch: {},
   methods: {
     onClick: function() {
       if (this.isDisabled) return;

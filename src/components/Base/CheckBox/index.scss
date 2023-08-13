@@ -1,0 +1,45 @@
+.checkbox {
+  position: relative;
+
+  width: fit-content;
+
+  color: $color-border-default;
+  
+  cursor: pointer;
+  
+  &::before {
+    position: absolute;
+    content: "";
+
+    width: 14px;
+    height: 14px;
+
+    top: 50%;
+    left: 50%;
+
+    z-index: -1;
+
+    transform: translate(-50%, -50%);
+
+    background-color: $color-secondary-default;
+  }
+
+  &.active {
+    color: $color-primary-default;
+  }
+
+  &.disabled {
+    color: $color-border-disabled;
+
+    pointer-events: none;
+    cursor: default;
+
+    &::before {
+      background-color: $color-primary-disabled;
+    }
+
+    &.active {
+      color: $color-font-disabled;
+    }
+  }
+}
